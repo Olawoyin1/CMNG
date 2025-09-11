@@ -4,7 +4,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { JOBS } from "./Data";
-import type { Job } from "../types/job";
+import type { JobType } from "../types/Job";
 
 const truncateText = (text: string, wordLimit: number) => {
   const words = text.split(" ");
@@ -50,7 +50,7 @@ const formatDate = (dateString: string) => {
   const states = ["Lagos", "Abuja", "Port Harcourt"];
   const types = ["Remote", "Hybrid", "On-site"];
 
-  const filteredJobs = JOBS.filter((job: Job) => {
+  const filteredJobs = JOBS.filter((job: JobType) => {
     const categoryMatch =
       selectedCategory === "All Categories" || job.category === selectedCategory;
     const stateMatch =

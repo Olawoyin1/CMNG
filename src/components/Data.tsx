@@ -1,6 +1,8 @@
-import type { Job } from "../types/job";
+// import type { Job } from "../types/job"/;
 
-export const JOBS: Job[] = [
+import type { JobType } from "../types/Job";
+
+export const JOBS: JobType[] = [
   {
     id: 1,
     title: "Dangote Group Graduate Trainee Program 2025",
