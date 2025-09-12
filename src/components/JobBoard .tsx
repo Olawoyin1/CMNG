@@ -190,7 +190,7 @@ const formatDate = (dateString: string) => {
             <h2 className="text-2xl font-bold text-gray-900">Job Listings</h2>
              <button
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              className="md:hidden mb-4 bg-blue-600 text-white px-4 py-2 rounded"
+              className="md:hidden mb-4 bg-[#282261] text-sm text-white px-4 py-2 rounded"
             >
               {isSidebarOpen ? "Close Filters" : "Open Filters"}
             </button>
