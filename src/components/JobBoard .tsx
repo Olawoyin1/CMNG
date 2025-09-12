@@ -64,19 +64,14 @@ const formatDate = (dateString: string) => {
     <section className="w-full bg-gray-50 py-10 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Mobile filter toggle */}
-        <button
-          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-          className="md:hidden mb-4 bg-blue-600 text-white px-4 py-2 rounded"
-        >
-          {isSidebarOpen ? "Close Filters" : "Open Filters"}
-        </button>
+       
 
         {/* Sidebar */}
         <aside
-          className={`bg-white sticky top-10 rounded overflow-hidden border border-gray-200 h-fit md:col-span-1 md:block ${
-            isSidebarOpen ? "block" : "hidden"
-          }`}
-        >
+  className={`fixed top-0 left-0 h-screen w-[300px] bg-white border-r border-gray-200 z-50 transform transition-transform duration-300 ease-in-out
+    ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
+    md:sticky md:top-10 md:h-fit md:w-auto md:translate-x-0 md:block md:rounded`}
+>
            <div className="bg-[#282261] text-white text-center px-4 py-2    ">
 
             <h3 className="text-xl font-bold">Filters</h3>
@@ -164,12 +159,42 @@ const formatDate = (dateString: string) => {
               ))}
             </div>
           </div>
+
            </div>
+            {/* Mobile footer buttons */}
+  <div className="flex justify-between items-center px-6 py-3 border-t border-gray-200 mt-2 md:hidden">
+    <button
+      onClick={() => {
+        setSelectedCategory("All Categories");
+        setSelectedStates([]);
+        setSelectedTypes([]);
+      }}
+      className="text-sm font-medium"
+    >
+      Reset Filter
+    </button>
+
+    <button
+      onClick={() => setIsSidebarOpen(false)}
+      className="text-sm font-medium text-gray-600 hover:text-gray-900"
+    >
+      Close ✕
+    </button>
+  </div>
+           
         </aside>
 
         {/* Job Listings */}
         <main className="md:col-span-3 space-y-6">
-          <h2 className="text-2xl font-bold mb-4 text-gray-900">Job Listings</h2>
+          <div className="flex items-center justify-between">
+            <h2 className="text-2xl font-bold text-gray-900">Job Listings</h2>
+             <button
+              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+              className="md:hidden mb-4 bg-blue-600 text-white px-4 py-2 rounded"
+            >
+              {isSidebarOpen ? "Close Filters" : "Open Filters"}
+            </button>
+          </div>
 
           {filteredJobs.length > 0 ? (
             <div className="grid gap-2">
@@ -186,7 +211,7 @@ const formatDate = (dateString: string) => {
                       {job.title}
                     </Link>
                   </h3>
-                  <p className="text-xs text-gray-500 mb-3">
+                  <p className="text-xs text-[#F25A29] mb-3">
                     {/* Date posted: {job.date} */}
                     {formatDate(job.date)}
                   </p>
