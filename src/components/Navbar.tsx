@@ -97,7 +97,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="http://amazincareersng.com/services"
+                  to="/"
                   onClick={() => setMenuOpen(false)}
                 >
                   Services
@@ -105,7 +105,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="http://amazincareersng.com/post-job"
+                  to="/"
                   onClick={() => setMenuOpen(false)}
                 >
                   Post Jobs
@@ -113,7 +113,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="http://amazincareersng.com/contact"
+                  to="/"
                   onClick={() => setMenuOpen(false)}
                 >
                   Contact
@@ -121,7 +121,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="http://amazincareersng.com/blog-posts"
+                  to="/blog"
                   onClick={() => setMenuOpen(false)}
                 >
                   Blog
