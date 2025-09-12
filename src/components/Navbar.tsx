@@ -60,7 +60,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/blog"
                   className="px-2 text-black/50 hover:text-black transition"
                 >
                   Blog

@@ -9,6 +9,7 @@ import PageWrapper from "../components/PageWrapper";
 import RequestService from "../pages/RequestService";
 import SharedLayout from "../components/SharedLayout";
 import Progress from "../components/Progress";
+import Blog from "../pages/Blog";
 
 
 
@@ -40,8 +41,8 @@ export default function AnimatedRoutes() {
           />
         
         <Route
-          path="/request-service"
-          element={<PageWrapper><RequestService /></PageWrapper>}
+          path="/blog"
+          element={<PageWrapper><Blog /></PageWrapper>}
         />
         
         <Route
