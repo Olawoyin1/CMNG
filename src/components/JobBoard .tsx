@@ -187,7 +187,7 @@ const formatDate = (dateString: string) => {
         {/* Job Listings */}
         <main className="md:col-span-3 space-y-6">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-gray-900">Job Listings</h2>
+            <h2 className="text-lg md:text-2xl font-bold text-gray-900">Job Listings</h2>
              <button
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
               className="flex md:hidden  bg-[#282261] text-sm text-white px-4 py-2 rounded"
