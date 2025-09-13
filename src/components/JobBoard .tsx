@@ -205,7 +205,7 @@ const formatDate = (dateString: string) => {
                 >
                   <h3 className="text-[17px] md:text-xl leading-5 font-bold text-gray-800 mb-2">
                     <Link
-                      to={`/jobs/${job.id}`}
+                      to={`/job-details`}
                       className="text-[#282261] hover:underline transition"
                     >
                       {job.title}
