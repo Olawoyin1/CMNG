@@ -203,7 +203,7 @@ const formatDate = (dateString: string) => {
                   key={job.id}
                   className="bg-white rounded border border-gray-200  p-4  transition"
                 >
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  <h3 className="text-[17px] md:text-xl leading-5 font-bold text-gray-800 mb-2">
                     <Link
                       to={`/jobs/${job.id}`}
                       className="text-[#282261] hover:underline transition"
@@ -216,14 +216,14 @@ const formatDate = (dateString: string) => {
                     {formatDate(job.date)}
                   </p>
                   <p className="text-gray-600 text-sm mb-4">
-                    {truncateText(job.description, 30)}
-                  </p>
-                  <Link
+                    {truncateText(job.description, 30)}... <Link
                     to={`/jobs/${job.id}`}
                     className="text-blue-600 text-sm font-medium hover:underline"
                   >
                     Read More →
                   </Link>
+                  </p>
+                  
                 </article>
               ))}
             </div>
