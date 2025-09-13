@@ -83,7 +83,6 @@ const PostJob = () => {
                       Job Title
                     </label>
                     <input
-                      name="title"
                       type="text"
                       placeholder="e.g. Senior React Developer"
                       className="block w-full p-2 border rounded-md"
@@ -100,7 +99,6 @@ const PostJob = () => {
                       Company Name
                     </label>
                     <input
-                      name="company"
                       type="text"
                       placeholder="e.g. TechCorp Nigeria"
                       className="block w-full p-2 border rounded-md"
@@ -120,7 +118,6 @@ const PostJob = () => {
                       Location
                     </label>
                     <select
-                      name="location"
                       className="block w-full p-2 border rounded-md"
                       {...formik.getFieldProps("location")}
                     >
@@ -140,7 +137,6 @@ const PostJob = () => {
                       Category
                     </label>
                     <input
-                      name="category"
                       type="text"
                       placeholder="e.g. Software Development"
                       className="block w-full p-2 border rounded-md"
@@ -160,7 +156,7 @@ const PostJob = () => {
                       Job Type
                     </label>
                     <select
-                      name="jobType"
+                      
                       className="block w-full p-2 border rounded-md"
                       {...formik.getFieldProps("jobType")}
                     >
@@ -180,7 +176,7 @@ const PostJob = () => {
                       Experience Level
                     </label>
                     <select
-                      name="experienceLevel"
+                     
                       className="block w-full p-2 border rounded-md"
                       {...formik.getFieldProps("experienceLevel")}
                     >
@@ -204,7 +200,7 @@ const PostJob = () => {
                     Salary Range
                   </label>
                   <input
-                    name="salary"
+                   
                     type="text"
                     placeholder="₦500,000 - ₦800,000"
                     className="block w-full p-2 border rounded-md"
@@ -221,7 +217,7 @@ const PostJob = () => {
                     Job Description
                   </label>
                   <textarea
-                    name="description"
+                  
                     placeholder="Describe the role, requirements, and responsibilities..."
                     className="block w-full min-h-[150px] p-2 border rounded-md"
                     {...formik.getFieldProps("description")}
@@ -239,7 +235,7 @@ const PostJob = () => {
                     Method of Application
                   </label>
                   <textarea
-                    name="methodOfApplication"
+                    
                     placeholder="e.g. Send CV and cover letter to hr@company.com"
                     className="block w-full min-h-[100px] p-2 border rounded-md"
                     {...formik.getFieldProps("methodOfApplication")}
@@ -260,7 +256,7 @@ const PostJob = () => {
                       Application Link
                     </label>
                     <input
-                      name="applicationLink"
+                      
                       type="url"
                       placeholder="https://company.com/apply"
                       className="block w-full p-2 border rounded-md"
@@ -280,7 +276,7 @@ const PostJob = () => {
                       Application Email
                     </label>
                     <input
-                      name="applicationEmail"
+                      
                       type="email"
                       placeholder="hr@company.com"
                       className="block w-full p-2 border rounded-md"
@@ -300,7 +296,7 @@ const PostJob = () => {
                       Application Deadline
                     </label>
                     <input
-                      name="deadline"
+                     
                       type="date"
                       className="block w-full p-2 border rounded-md"
                       {...formik.getFieldProps("deadline")}
