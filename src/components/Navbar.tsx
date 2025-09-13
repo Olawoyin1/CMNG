@@ -44,7 +44,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/post-job"
                   className="px-2 text-black/50 hover:text-black transition"
                 >
                   Post Jobs
@@ -105,7 +105,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/post-job"
                   onClick={() => setMenuOpen(false)}
                 >
                   Post Jobs

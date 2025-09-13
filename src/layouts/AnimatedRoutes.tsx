@@ -4,11 +4,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Home from "../pages/Home";
-import About from "../pages/About";
 import PageWrapper from "../components/PageWrapper";
 import SharedLayout from "../components/SharedLayout";
 import Progress from "../components/Progress";
 import Blog from "../pages/Blog";
+import PostJob from "../pages/PostJob";
+import JobDetails from "../pages/JobDetails";
 
 
 
@@ -35,13 +36,18 @@ export default function AnimatedRoutes() {
           />
 
         <Route
-          path="/about"
-          element={<PageWrapper><About /></PageWrapper>}
+          path="/post-job"
+          element={<PageWrapper><PostJob /></PageWrapper>}
           />
         
         <Route
           path="/blog"
           element={<PageWrapper><Blog /></PageWrapper>}
+        />
+        
+        <Route
+          path="/job-details"
+          element={<PageWrapper><JobDetails /></PageWrapper>}
         />
         
         <Route

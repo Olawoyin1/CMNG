@@ -217,7 +217,7 @@ const formatDate = (dateString: string) => {
                   </p>
                   <p className="text-gray-600 text-sm mb-4">
                     {truncateText(job.description, 30)}... <Link
-                    to={`/jobs/${job.id}`}
+                    to={`/job-details`}
                     className="text-blue-600 text-sm font-medium hover:underline"
                   >
                     Read More →
