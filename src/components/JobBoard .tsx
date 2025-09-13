@@ -88,7 +88,7 @@ const formatDate = (dateString: string) => {
               {categories.map((cat) => (
                 <label
                   key={cat}
-                  className="flex items-center gap-2 text-gray-600 cursor-pointer"
+                  className="text-sm md:text-base flex items-center gap-2 text-gray-600 cursor-pointer"
                 >
                   <input
                     type="radio"
@@ -96,7 +96,7 @@ const formatDate = (dateString: string) => {
                     value={cat}
                     checked={selectedCategory === cat}
                     onChange={() => setSelectedCategory(cat)}
-                    className="accent-blue-600"
+                    className="accent-[#F25A29]"
                   />
                   {cat}
                 </label>
@@ -111,7 +111,7 @@ const formatDate = (dateString: string) => {
               {states.map((state) => (
                 <label
                   key={state}
-                  className="flex items-center gap-2 text-gray-600 cursor-pointer"
+                  className="text-sm md:text-base flex items-center gap-2 text-gray-600 cursor-pointer"
                 >
                   <input
                     type="checkbox"
@@ -124,7 +124,7 @@ const formatDate = (dateString: string) => {
                           : prev.filter((s) => s !== state)
                       )
                     }
-                    className="accent-blue-600"
+                    className="accent-[#F25A29]"
                   />
                   {state}
                 </label>
@@ -139,7 +139,7 @@ const formatDate = (dateString: string) => {
               {types.map((type) => (
                 <label
                   key={type}
-                  className="flex items-center gap-2 text-gray-600 cursor-pointer"
+                  className="text-sm md:text-base  flex items-center gap-2 text-gray-600  cursor-pointer"
                 >
                   <input
                     type="checkbox"
@@ -152,7 +152,7 @@ const formatDate = (dateString: string) => {
                           : prev.filter((t) => t !== type)
                       )
                     }
-                    className="accent-blue-600"
+                    className="accent-[#F25A29]"
                   />
                   {type}
                 </label>

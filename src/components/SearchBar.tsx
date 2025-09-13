@@ -28,6 +28,12 @@ const SearchBar = ({ onSearch, className = "" }: SearchBarProps) => {
   };
 
   return (
+    <>
+     <h1 className="text-xl lg:text-3xl text-center text-[#282261] font-extrabold leading-tight mt-3 md:mb-3">
+              Find Remote, Freelance & Internship <br className="" />
+              <span className="text-[#F25A29]">Jobs in Nigeria</span>
+            </h1>
+    
     <form 
       onSubmit={handleSubmit} 
       className={`w-full p-4 sm:p-5 ${className}`}
@@ -64,7 +70,7 @@ const SearchBar = ({ onSearch, className = "" }: SearchBarProps) => {
         <div className=" w-full m-0 border-2">
             <button 
             type="submit" 
-            className="w-full  bg-[#282261] text-white md:max-w-[200px] py-2 cursor-pointer font-medium"
+            className="w-full text-sm  bg-[#282261] text-white md:max-w-[200px] py-2 cursor-pointer font-medium"
             >
             Search Jobs
             </button>
@@ -76,6 +82,7 @@ const SearchBar = ({ onSearch, className = "" }: SearchBarProps) => {
         
       </div>
     </form>
+    </>
   );
 };
 
