@@ -74,7 +74,7 @@ const formatDate = (dateString: string) => {
 >
            <div className="bg-[#282261] text-white text-center px-4 py-2    ">
 
-            <h3 className="text-xl font-bold">Filters</h3>
+            <h3 className="font-bold">Filters</h3>
            </div>
 
            <div className="p-6">
@@ -190,7 +190,7 @@ const formatDate = (dateString: string) => {
             <h2 className="text-2xl font-bold text-gray-900">Job Listings</h2>
              <button
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              className="md:hidden mb-4 bg-[#282261] text-sm text-white px-4 py-2 rounded"
+              className="flex md:hidden  bg-[#282261] text-sm text-white px-4 py-2 rounded"
             >
               {isSidebarOpen ? "Close Filters" : "Open Filters"}
             </button>

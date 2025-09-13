@@ -80,7 +80,7 @@ const Footer = () => {
         
         {/* Logo */}
         <div className="flex justify-center mb-6">
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center ">
             <img src="../../Image/logo.png" alt="logo" className="w-8" />
             <h4 className="text-xl font-extrabold text-gray-800">
               areermatters<span className="text-[#F25A29]">NG</span>

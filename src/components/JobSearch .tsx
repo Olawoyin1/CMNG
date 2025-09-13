@@ -18,7 +18,7 @@ const JobSearch = () => {
           <input
             type="text"
             placeholder="Location"
-            className="w-full flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
+            className="w-full hidden md:flex flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
           />
 
           {/* Search Button */}

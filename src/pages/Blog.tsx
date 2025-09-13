@@ -74,11 +74,11 @@ const Blog = () => {
       
       
       {/* Hero Section */}
-      <section className="bg-gray-900 py-10 md:py-16">
+      <section className="bg-gray-900 py-10 px-4 md:px-0 md:py-16">
         <div className="container mx-auto">
           <div className="flex flex-col items-center text-center">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Careersmatters<span className="color">NG</span> Blog</h1>
-            <p className="text-lg text-gray-300 mb-8 max-w-3xl">
+            <p className="text-sm md:text-lg text-gray-300 mb-8 max-w-3xl">
               Tips, strategies, and insights to thrive in Nigeria's remote and freelance job market
             </p>
           </div>
@@ -86,7 +86,7 @@ const Blog = () => {
       </section>
       
       {/* Blog Posts */}
-      <section className="py-10 bg-gray-50">
+      <section className="py-10 px-4 md:px-0 bg-gray-50">
         <div className="container mx-auto ">
           {/* Featured Post */}
           <div className="mb-12 md:h-70 overflow-hidden">
@@ -101,12 +101,12 @@ const Blog = () => {
                 </div>
                 <div className="md:w-1/2  flex items-center  justify-center">
 
-                <div className=" flex items-start justify-center px-6 p-2 flex-col h-auto">
+                <div className=" flex items-start justify-center md:px-6 p-2 flex-col h-auto">
                 
                   <span className="inline-block bg-careersng-purple-light text-careersng-purple px-3 py-1 rounded-full text-sm font-medium mb-4">
                     Featured
                   </span>
-                  <h2 className="text-2xl font-bold text-careersng-navy mb-3">
+                  <h2 className="text-xl font-bold text-[#282261] mb-3">
                     {blogPosts[0].title}
                   </h2>
                   <p className="text-gray-600 mb-4 text-sm">
@@ -144,7 +144,7 @@ const Blog = () => {
                     <div className="flex flex-col gap-3">
                        
                         
-                        <h6 className="text-lg font-bold">{post.title}</h6>
+                        <h6 className="text-lg text-[#282261] font-bold">{post.title}</h6>
                         <pattern className="flex-grow">
                         <div className="flex items-center text-xs text-gray-500">
                             <Tag size={14} className="mr-1 text-[#ee774f]" />

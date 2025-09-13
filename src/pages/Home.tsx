@@ -1,10 +1,12 @@
 
 import JobBoard from "../components/JobBoard "
 import JobSearch from "../components/JobSearch "
+import SearchBar from "../components/SearchBar"
 const Home = () => {
   return (
     <div>
-      <JobSearch />
+      <SearchBar />
+      {/* <JobSearch /> */}
       <JobBoard />
       
     </div>
