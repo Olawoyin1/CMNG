@@ -2,6 +2,8 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { SlBriefcase } from "react-icons/sl";
+import TiptapEditor from "../components/TiptapEditor";
+import { useState } from "react";
 
 const nigerianStates = [
   "Abia","Adamawa","Akwa Ibom","Anambra","Bauchi","Bayelsa","Benue","Borno",
@@ -11,6 +13,8 @@ const nigerianStates = [
 ];
 
 const PostJob = () => {
+
+  const [content, setContent] = useState("");
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -216,17 +220,9 @@ const PostJob = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-1">
                     Job Description
                   </label>
-                  <textarea
-                  
-                    placeholder="Describe the role, requirements, and responsibilities..."
-                    className="block w-full min-h-[150px] p-2 border rounded-md"
-                    {...formik.getFieldProps("description")}
-                  />
-                  {formik.touched.description && formik.errors.description && (
-                    <div className="text-red-700 text-xs">
-                      {formik.errors.description}
-                    </div>
-                  )}
+                
+
+                <TiptapEditor value={content} onChange={setContent} />
                 </div>
 
                 {/* Method of Application */}
@@ -270,25 +266,7 @@ const PostJob = () => {
                       )}
                   </div>
 
-                  {/* Application Email */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Application Email
-                    </label>
-                    <input
-                      
-                      type="email"
-                      placeholder="hr@company.com"
-                      className="block w-full p-2 border rounded-md"
-                      {...formik.getFieldProps("applicationEmail")}
-                    />
-                    {formik.touched.applicationEmail &&
-                      formik.errors.applicationEmail && (
-                        <div className="text-red-700 text-xs">
-                          {formik.errors.applicationEmail}
-                        </div>
-                      )}
-                  </div>
+             
 
                   {/* Deadline */}
                   <div>
