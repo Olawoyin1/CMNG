@@ -4,6 +4,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { JOBS } from "./Data";
+import { FaBuilding } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 import type { JobType } from "../types/Job";
 
 const truncateText = (text: string, wordLimit: number) => {
@@ -88,7 +90,7 @@ const formatDate = (dateString: string) => {
               {categories.map((cat) => (
                 <label
                   key={cat}
-                  className="text-sm md:text-base flex items-center gap-2 text-gray-600 cursor-pointer"
+                  className="text-sm md:text-base flex items-center gap-2 text-[#282261] font-medium cursor-pointer"
                 >
                   <input
                     type="radio"
@@ -111,7 +113,7 @@ const formatDate = (dateString: string) => {
               {states.map((state) => (
                 <label
                   key={state}
-                  className="text-sm md:text-base flex items-center gap-2 text-gray-600 cursor-pointer"
+                  className="text-sm md:text-base flex items-center gap-2 text-[#282261] font-medium cursor-pointer"
                 >
                   <input
                     type="checkbox"
@@ -139,7 +141,7 @@ const formatDate = (dateString: string) => {
               {types.map((type) => (
                 <label
                   key={type}
-                  className="text-sm md:text-base  flex items-center gap-2 text-gray-600  cursor-pointer"
+                  className="text-sm md:text-base  flex items-center gap-2 text-[#282261] font-medium  cursor-pointer"
                 >
                   <input
                     type="checkbox"
@@ -203,7 +205,7 @@ const formatDate = (dateString: string) => {
                   key={job.id}
                   className="bg-white rounded border border-gray-200  p-4  transition"
                 >
-                  <h3 className="text-[17px] md:text-xl leading-5 font-bold text-gray-800 mb-2">
+                  <h3 className="text-[17px] md:text-[18px] leading-5 font-bold text-gray-800 mb-2">
                     <Link
                       to={`/job-details`}
                       className="text-[#282261] hover:underline transition"
@@ -211,12 +213,23 @@ const formatDate = (dateString: string) => {
                       {job.title}
                     </Link>
                   </h3>
+                  <div className="flex items-center text-sm text-[#282261]  mb-2">
+
+                    <FaBuilding className="mr-2 " />
+                    <span>{job.company}</span>
+
+                    <FaLocationDot className="mr-2 ml-4 text-g" />
+                    <span>{job.state}</span>
+                  </div>
+
+
+
                   <p className="text-xs text-[#F25A29] mb-3">
                     {/* Date posted: {job.date} */}
                     {formatDate(job.date)}
                   </p>
-                  <p className="text-gray-600 text-sm mb-4">
-                    {truncateText(job.description, 30)}... <Link
+                  <p className="text-[#282261] font-medium text-sm mb-4">
+                    {truncateText(job.description, 24)}... <Link
                     to={`/job-details`}
                     className="text-blue-600 text-sm font-medium hover:underline"
                   >

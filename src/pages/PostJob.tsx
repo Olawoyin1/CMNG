@@ -89,7 +89,7 @@ const PostJob = () => {
                     <input
                       type="text"
                       placeholder="e.g. Senior React Developer"
-                      className="block w-full p-2 border rounded-md"
+                      className="block w-full p-2 border border-gray-300 rounded-md"
                       {...formik.getFieldProps("title")}
                     />
                     {formik.touched.title && formik.errors.title && (
@@ -105,7 +105,7 @@ const PostJob = () => {
                     <input
                       type="text"
                       placeholder="e.g. TechCorp Nigeria"
-                      className="block w-full p-2 border rounded-md"
+                      className="block w-full p-2 border border-gray-300 rounded-md"
                       {...formik.getFieldProps("company")}
                     />
                     {formik.touched.company && formik.errors.company && (
@@ -122,7 +122,7 @@ const PostJob = () => {
                       Location
                     </label>
                     <select
-                      className="block w-full p-2 border rounded-md"
+                      className="block w-full p-2 border border-gray-300 rounded-md"
                       {...formik.getFieldProps("location")}
                     >
                       <option value="">Select State</option>
@@ -143,7 +143,7 @@ const PostJob = () => {
                     <input
                       type="text"
                       placeholder="e.g. Software Development"
-                      className="block w-full p-2 border rounded-md"
+                      className="block w-full p-2 border border-gray-300 rounded-md"
                       {...formik.getFieldProps("category")}
                     />
                     {formik.touched.category && formik.errors.category && (
@@ -161,7 +161,7 @@ const PostJob = () => {
                     </label>
                     <select
                       
-                      className="block w-full p-2 border rounded-md"
+                      className="block w-full p-2 border border-gray-300 rounded-md"
                       {...formik.getFieldProps("jobType")}
                     >
                       <option value="">Select Job Type</option>
@@ -181,7 +181,7 @@ const PostJob = () => {
                     </label>
                     <select
                      
-                      className="block w-full p-2 border rounded-md"
+                      className="block w-full p-2 border border-gray-300 rounded-md"
                       {...formik.getFieldProps("experienceLevel")}
                     >
                       <option value="">Select Experience Level</option>
@@ -207,7 +207,7 @@ const PostJob = () => {
                    
                     type="text"
                     placeholder="₦500,000 - ₦800,000"
-                    className="block w-full p-2 border rounded-md"
+                    className="block w-full p-2 border border-gray-300 rounded-md"
                     {...formik.getFieldProps("salary")}
                   />
                   {formik.touched.salary && formik.errors.salary && (
@@ -233,7 +233,7 @@ const PostJob = () => {
                   <textarea
                     
                     placeholder="e.g. Send CV and cover letter to hr@company.com"
-                    className="block w-full min-h-[100px] p-2 border rounded-md"
+                    className="block w-full min-h-[100px] p-2 border border-gray-300 rounded-md"
                     {...formik.getFieldProps("methodOfApplication")}
                   />
                   {formik.touched.methodOfApplication &&
@@ -255,7 +255,7 @@ const PostJob = () => {
                       
                       type="url"
                       placeholder="https://company.com/apply"
-                      className="block w-full p-2 border rounded-md"
+                      className="block w-full p-2 border border-gray-300 rounded-md"
                       {...formik.getFieldProps("applicationLink")}
                     />
                     {formik.touched.applicationLink &&
@@ -276,7 +276,7 @@ const PostJob = () => {
                     <input
                      
                       type="date"
-                      className="block w-full p-2 border rounded-md"
+                      className="block w-full p-2 border border-gray-300 rounded-md"
                       {...formik.getFieldProps("deadline")}
                     />
                     {formik.touched.deadline && formik.errors.deadline && (
@@ -292,7 +292,7 @@ const PostJob = () => {
                   <button
                     type="button"
                     onClick={() => navigate(-1)}
-                    className="border border-gray-300 text-sm px-4 py-2 rounded-md hover:bg-gray-100"
+                    className="border border-gray-300 border border-gray-300-gray-300 text-sm px-4 py-2 rounded-md hover:bg-gray-100"
                   >
                     Cancel
                   </button>
