@@ -63,7 +63,7 @@ const formatDate = (dateString: string) => {
   });
 
   return (
-    <section className="w-full bg-gray-50 py-10 px-4">
+    <section className="w-full bg-gray-50 py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Mobile filter toggle */}
        
@@ -187,8 +187,8 @@ const formatDate = (dateString: string) => {
         </aside>
 
         {/* Job Listings */}
-        <main className="md:col-span-3 space-y-6">
-          <div className="flex items-center justify-between">
+        <main className="md:col-span-3   space-y-6">
+          <div className="flex items-center justify-between px-4 md:px-0">
             <h2 className="text-lg md:text-2xl font-bold text-gray-900">Job Listings</h2>
              <button
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -199,11 +199,11 @@ const formatDate = (dateString: string) => {
           </div>
 
           {filteredJobs.length > 0 ? (
-            <div className="grid gap-2">
+            <div className="grid md:gap-2">
               {filteredJobs.map((job) => (
                 <article
                   key={job.id}
-                  className="bg-white rounded border border-gray-200  p-4  transition"
+                  className="bg-white rounded border border-gray-100 md:border-gray-200  p-4  transition"
                 >
                   <h3 className="text-[17px] md:text-[18px] leading-5 font-bold text-gray-800 mb-2">
                     <Link
