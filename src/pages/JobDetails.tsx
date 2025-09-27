@@ -21,9 +21,10 @@ const jobData = {
   salary: "₦500,000 - ₦800,000",
   postedAt: "2 days ago",
   description: `
-    TechNova Solutions is looking for a Senior React Developer to join our growing team. The ideal candidate will have extensive experience in building high-performance, scalable web applications using React and its ecosystem.
+    TechNova Solutions is looking for a Senior React Developer to join our growing team. The ideal candidate will have extensive experience in building high-performance, scalable web applications using React and its ecosystem. 
 
-    As a Senior React Developer, you will be responsible for developing and implementing user interface components using React.js best practices. You will also be responsible for profiling and improving front-end performance and documenting our front-end codebase.
+    As a Senior React Developer, you will be responsible for developing and implementing user interface components using React.js best practices. You will also be responsible for profiling and improving front-end performance and documenting our front-end codebase. 
+
     TechNova Solutions is looking for a Senior React Developer to join our growing team. The ideal candidate will have extensive experience in building high-performance, scalable web applications using React and its ecosystem.
 
     As a Senior React Developer, you will be responsible for developing and implementing user interface components using React.js best practices. You will also be responsible for profiling and improving front-end performance and documenting our front-end codebase.
@@ -72,13 +73,13 @@ const JobDetails = () => {
 
 
   return (
-    <div className="min-h-screen bg-gray-100 py-8 ">
+    <div className="min-h-screen bg-gray-100 md:py-8 ">
          {/* Main content */}
-      <div className="max-w-7xl px-4 md:px-0 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="max-w-7xl  md:px-0 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Left content */}
         <div className="lg:col-span-2 space-y-6">
           {/* Job Header */}
-          <div className="bg-white rounded-xl shadow-sm p-6">
+          <div className="bg-white md:rounded md:shadow p-4">
                 <div className="flex items-center mb-3">
                   <div className="flex-shrink-0 h-13 w-13 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center mr-4">
                     {jobData.logo ? (
@@ -132,15 +133,21 @@ const JobDetails = () => {
           </div>
 
           {/* Job description */}
-          <div className="bg-white rounded-lg shadow p-6">
+          <div className="bg-white md:rounded md:shadow p-4">
             <h2 className="text-lg font-semibold mb-3 text-[#282261]">Job Description</h2>
-            <div className="text-gray-700 text-sm" dangerouslySetInnerHTML={{ __html: jobData.description }} />
+            {/* <div className="text-gray-700 text-sm" dangerouslySetInnerHTML={{ __html: jobData.description }} /> */}
+            <div
+  className="text-gray-700 text-sm whitespace-pre-line"
+  dangerouslySetInnerHTML={{ __html: jobData.description.replace(/\n/g, "<br />") }}
+/>
+
             <h2 className="text-lg font-semibold my-3 text-[#282261]">Responsibilty</h2>
-            <div className="text-gray-700 text-sm">
-                {jobData.resonsibility.map((item, index) => (
-                  <li key={index} className="mb-1">{item}</li>
-                ))}
-            </div>
+            <ul className="text-gray-700 text-sm list-disc pl-6 space-y-1">
+  {jobData.resonsibility.map((item, index) => (
+    <li key={index}>{item}</li>
+  ))}
+</ul>
+
             <h2 className="text-lg font-semibold my-3 text-[#282261]">Method Of Application</h2>
             <div className="text-gray-700 text-sm" dangerouslySetInnerHTML={{ __html: jobData.method }} />
           </div>
@@ -166,7 +173,7 @@ const JobDetails = () => {
         {/* Right sidebar */}
         <div className="space-y-6">
           {/* Company Info */}
-          <div className="bg-white rounded-xl shadow-sm p-6">
+          <div className="bg-white md:rounded md:shadow p-4">
                 <h2 className="text-xl font-semibold text-[#282261] mb-4">Company Information</h2>
                 
                 <div className="space-y-4">
@@ -205,7 +212,7 @@ const JobDetails = () => {
 
 
             {/* Job Overview */}
-            <div className="bg-white rounded-xl shadow-sm p-6">
+            <div className="bg-white md:rounded md:shadow p-4">
                 <h2 className="text-lg font-semibold text-[#282261] mb-4">Job Overview</h2>
                 
                 <div className="space-y-4">
