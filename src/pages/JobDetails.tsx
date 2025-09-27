@@ -81,25 +81,25 @@ const JobDetails = () => {
           {/* Job Header */}
           <div className="bg-white md:rounded md:shadow p-4">
                 <div className="flex items-center mb-3">
-                  <div className="flex-shrink-0 h-13 w-13 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center mr-4">
+                  <div className="flex-shrink-0 h-10 w-10 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center mr-4">
                     {jobData.logo ? (
                       <img src={jobData.logo} alt={`${jobData.company} logo`} className="h-full w-full object-cover" />
                     ) : (
-                      <Building className="h-8 w-8 text-gray-400" />
+                      <Building className="h-5 w-5 text-gray-400" />
                     )}
                   </div>
 
                   <div>
-                    <h1 className="text-lg md:text-xl font-bold text-careersng-navy mb-1">
+                    <h1 className=" md:text-lg font-bold text-[#282261] mb-1">
                       {jobData.title}
                     </h1>
-                    <p className="text-sm text-gray-600">{jobData.company}</p>
+                    <p className="text-xs md:text-sm text-[#282261]">{jobData.company}</p>
                   </div>
                   
                 </div>
                   <div className="flex-1">
                     
-                    <div className="flex flex-wrap gap-3 text-sm text-gray-500">
+                    <div className="flex flex-wrap gap-3 text-sm text-[#282261]">
                       <div className="flex items-center">
                         <MapPin size={16} className="mr-1" />
                         <span>{jobData.location}</span>
@@ -134,22 +134,22 @@ const JobDetails = () => {
 
           {/* Job description */}
           <div className="bg-white md:rounded md:shadow p-4">
-            <h2 className="text-lg font-semibold mb-3 text-[#282261]">Job Description</h2>
+            <h2 className="text-lg font-bold mb-0 text-[#282261]">Job Description</h2>
             {/* <div className="text-gray-700 text-sm" dangerouslySetInnerHTML={{ __html: jobData.description }} /> */}
             <div
-  className="text-gray-700 text-sm whitespace-pre-line"
+  className="text-[#282261] font-medium text-sm whitespace-pre-line"
   dangerouslySetInnerHTML={{ __html: jobData.description.replace(/\n/g, "<br />") }}
 />
 
             <h2 className="text-lg font-semibold my-3 text-[#282261]">Responsibilty</h2>
-            <ul className="text-gray-700 text-sm list-disc pl-6 space-y-1">
+            <ul className="text-[#282261] font-medium text-sm list-disc pl-6 space-y-1">
   {jobData.resonsibility.map((item, index) => (
     <li key={index}>{item}</li>
   ))}
 </ul>
 
-            <h2 className="text-lg font-semibold my-3 text-[#282261]">Method Of Application</h2>
-            <div className="text-gray-700 text-sm" dangerouslySetInnerHTML={{ __html: jobData.method }} />
+            <h2 className="text-lg font-semibold mt-8 mb-3 text-[#282261]">Method Of Application</h2>
+            <div className="text-[#282261] font-medium text-sm" dangerouslySetInnerHTML={{ __html: jobData.method }} />
           </div>
 
           
@@ -177,7 +177,7 @@ const JobDetails = () => {
                 <h2 className="text-xl font-semibold text-[#282261] mb-4">Company Information</h2>
                 
                 <div className="space-y-4">
-                  <p className="text-gray-600 text-sm">{jobData.companyInfo.description}</p>
+                  <p className="text-[#282261] font-medium text-sm">{jobData.companyInfo.description}</p>
                   
                   <div className="space-y-2">
                     

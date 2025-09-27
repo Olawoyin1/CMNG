@@ -29,7 +29,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/"
-                  className="px-2 text-black/50 hover:text-black transition"
+                  className="px-2 text-[#282261] font-medium hover:text-black transition"
                 >
                   Home
                 </Link>
@@ -37,7 +37,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/"
-                  className="px-2 text-black/50 hover:text-black transition"
+                  className="px-2 text-[#282261] font-medium hover:text-black transition"
                 >
                   Services
                 </Link>
@@ -45,7 +45,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/post-job"
-                  className="px-2 text-black/50 hover:text-black transition"
+                  className="px-2 text-[#282261] font-medium hover:text-black transition"
                 >
                   Post Jobs
                 </Link>
@@ -53,7 +53,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/"
-                  className="px-2 text-black/50 hover:text-black transition"
+                  className="px-2 text-[#282261] font-medium hover:text-black transition"
                 >
                   Contact
                 </Link>
@@ -61,7 +61,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/blog"
-                  className="px-2 text-black/50 hover:text-black transition"
+                  className="px-2 text-[#282261] font-medium hover:text-black transition"
                 >
                   Blog
                 </Link>
