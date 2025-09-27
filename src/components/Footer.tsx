@@ -91,10 +91,10 @@ const Footer = () => {
         {/* Navigation */}
         <ul className="flex flex-wrap justify-center space-x-6 mb-6 text-sm text-gray-600">
           <li><Link to="/" className="hover:text-[#F25A29]">Home</Link></li>
-          <li><Link to="http://amazincareersng.com/services" className="hover:text-[#F25A29]">Services</Link></li>
-          <li><Link to="http://amazincareersng.com/post-job" className="hover:text-[#F25A29]">Post Job</Link></li>
-          <li><Link to="http://amazincareersng.com/contact" className="hover:text-[#F25A29]">Contact</Link></li>
-          <li><Link to="http://amazincareersng.com/blog-posts" className="hover:text-[#F25A29]">Blog</Link></li>
+          <li><Link to="/" className="hover:text-[#F25A29]">Services</Link></li>
+          <li><Link to="/post-job" className="hover:text-[#F25A29]">Post Job</Link></li>
+          <li><Link to="/" className="hover:text-[#F25A29]">Contact</Link></li>
+          <li><Link to="/blog" className="hover:text-[#F25A29]">Blog</Link></li>
         </ul>
 
         {/* Socials */}
